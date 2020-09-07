@@ -27,7 +27,7 @@ public class StudentListApi {
     }
 
     @GetMapping("/students/sort")
-    public List<Student> sortStudent(@RequestBody String name){
+    public List<Student> sortStudent(){
         return studentService.sortStudent();
     }
 }
