@@ -21,4 +21,13 @@ public class StudentListApi {
         return studentService.getAllStudent();
     }
 
+    @PostMapping("/students/add")
+    public List<Student> addStudent(@RequestBody String name){
+        return studentService.addStudent(name);
+    }
+
+    @GetMapping("/students/sort")
+    public List<Student> sortStudent(@RequestBody String name){
+        return studentService.sortStudent();
+    }
 }

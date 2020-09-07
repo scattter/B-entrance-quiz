@@ -3,8 +3,10 @@ package com.thoughtworks.capability.gtb.entrancequiz.service;
 import com.thoughtworks.capability.gtb.entrancequiz.domain.Student;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Service
@@ -56,6 +58,11 @@ public class StudentService {
     public List<Student> addStudent(String name) {
         int index = students.size() + 1;
         students.add(new Student(index, name));
+        return students;
+    }
+
+    public List<Student> sortStudent(){
+        Collections.shuffle(students);
         return students;
     }
 }
